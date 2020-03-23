@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <table class="table table-inverse">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i < jsondata.length; i++) {%>
+            <tr>
+                <td><%= jsondata[i].username %></td>
+                <td><%= jsondata[i].country %></td>
+                <td><%= jsondata[i].message %></td>
+                <td><%= jsondata[i].date %></td>
+            </tr>
+
+            <%  } %>
+        </tbody>
+    </table>
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+
+</html>
